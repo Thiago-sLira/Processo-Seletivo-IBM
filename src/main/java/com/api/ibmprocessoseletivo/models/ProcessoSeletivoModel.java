@@ -3,7 +3,6 @@ package com.api.ibmprocessoseletivo.models;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Entity
 @Table(name = "TB_PROCESSO_SELETIVO")
@@ -12,13 +11,13 @@ public class ProcessoSeletivoModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private int id;
     @Column(nullable = false, unique = true, length = 30)
     private String nome;
     @Column(nullable = false, length = 15)
     private String status;
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
